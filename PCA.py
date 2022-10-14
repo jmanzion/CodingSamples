@@ -1,4 +1,7 @@
-#%%
+'''
+The file utilized Principal Component Analysis to find the primary features of two subjects from the YaleFace dataset and use that to be able to detect the subject in other images.
+'''
+
 import numpy as np
 from numpy import asarray
 import math
@@ -13,7 +16,6 @@ import pandas as pd
 from skimage.measure import block_reduce
 from skimage.transform import resize
 
-#%%
 #create data matrix for subject 1 and 2
 im = []
 images1 = ['glasses.gif','happy.gif','leftlight.gif','noglasses.gif','normal.gif','rightlight.gif','sad.gif','sleepy.gif','surprised.gif','wink.gif']
@@ -62,7 +64,6 @@ ind2 = np.argsort(vals2)
 vals2= vals2[ind2]
 vecs2 = vecs2[:,ind2].T
 
-# %%
 #subject 1 eigenfaces
 print('Eigenfaces for subject 1')
 fig = plt.figure(figsize=(8, 6))
@@ -71,7 +72,6 @@ for i in range(6):
     ax.imshow(np.reshape(vecs[i],(60,80)), cmap=plt.cm.bone)
 plt.show()
 
-#%%
 #subject 2 eigenfaces
 print('Eigenfaces for subject 2')
 fig = plt.figure(figsize=(8, 6))
@@ -80,7 +80,6 @@ for i in range(6):
     ax.imshow(np.reshape(vecs2[i],(60,80)), cmap=plt.cm.bone)
 plt.show()
 
-#%%
 #downsample test subject pics
 test1 = resize(plt.imread('data/yalefaces/subject01-test.gif'),(h*w,1),anti_aliasing=True)
 test2 = resize(plt.imread('data/yalefaces/subject02-test.gif'),(h*w,1),anti_aliasing=True)
