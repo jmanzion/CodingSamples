@@ -1,3 +1,7 @@
+'''
+The file will utilize k means clustering using Euclidean distance or Manhattan distance in order to perform color compression on the provided images.
+'''
+
 import scipy.io as sio
 import numpy as np
 import matplotlib.pyplot as plt
