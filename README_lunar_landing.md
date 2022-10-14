@@ -1,4 +1,4 @@
-# Project 2 - Lunar Landing
+Lunar Landing Notebook
 
 Steps to run the uploaded Jupyter Notebook, lunar_landing.ipynb, are shown below. This will create and run the Deep Q-learning algorithm to solve tghe Lunar Landing game from OpenAI Gym.
 
